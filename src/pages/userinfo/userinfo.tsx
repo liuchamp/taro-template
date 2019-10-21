@@ -1,8 +1,8 @@
 import Taro, { Component, Config } from "@tarojs/taro";
-import { View, Text, Button } from "@tarojs/components";
-import "./index.scss";
+import { View, Text } from "@tarojs/components";
+import "./userinfo.scss";
 
-export default class Index extends Component {
+export default class Userinfo extends Component {
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -11,7 +11,7 @@ export default class Index extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: "首页"
+    navigationBarTitleText: "用户详情"
   };
 
   componentWillMount() {}
@@ -23,16 +23,11 @@ export default class Index extends Component {
   componentDidShow() {}
 
   componentDidHide() {}
-  handleruserinfo = () => {
-    Taro.redirectTo({
-      url: "/pages/userinfo/userinfo"
-    });
-  };
+
   render() {
     return (
-      <View className="index">
-        <Text>Hello world!</Text>
-        <Button onClick={this.handleruserinfo}>userinfo</Button>
+      <View className="userinfo">
+        <Text>userinfo</Text>
       </View>
     );
   }
